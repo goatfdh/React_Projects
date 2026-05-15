@@ -1,16 +1,72 @@
-# React + Vite
+## 🧭 `CardProject` — Job Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and modern job listing platform that displays real-world-style job cards from top tech companies like Google, Amazon, Meta, Apple, Netflix, and more.
 
-Currently, two official plugins are available:
+### 🖼️ Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Job Board Preview](./CardProject/src/assets/JobPreview.jpeg)
 
-## React Compiler
+### ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📋 **Job Cards** — Each card displays the company logo, job title, employment type, experience level, salary, and location
+- 🏢 **Top Companies** — Listings from Google, Amazon, Meta, Apple, Netflix, Microsoft, Tesla, Adobe, Oracle, and Salesforce
+- 💾 **Save Jobs** — Save button on each card to bookmark preferred listings
+- 🎯 **Experience Levels** — Clearly labeled as Junior, Mid, or Senior Level
+- ⏱️ **Posted Time** — Shows how recently each job was posted (e.g. "3 days ago")
+- 📍 **Location Info** — Displays city/country or Remote status
+- 🟢 **Apply Now** — Prominent call-to-action button on every card
+- 📱 **Responsive Grid Layout** — Cards arranged in a clean multi-column grid
 
-## Expanding the ESLint configuration
+### 🏗️ Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+CardProject/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   └── Card.jsx       # Individual job listing card
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── vite.config.js
+```
+
+### 🚀 Getting Started
+
+```bash
+# Navigate into the project
+cd CardProject
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### 💡 Key React Concepts Used
+
+- **Component-based architecture** — Reusable `JobCard` component for each listing
+- **Props** — Passing job data (title, company, salary, location, etc.) as props
+- **Array `.map()`** — Rendering job cards dynamically from a data array
+- **Conditional rendering** — Showing different badge styles per experience level
+
+### 📦 Sample Job Data Structure
+
+```js
+{
+  company: "Google",
+  logo: "/logos/google.png",
+  title: "Frontend Developer",
+  postedAt: "5 days ago",
+  type: "Full Time",
+  level: "Junior Level",
+  salary: "$45",
+  location: "Bangalore, India"
+}
+```
+
+---
