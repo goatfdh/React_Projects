@@ -4,7 +4,7 @@ A clean and modern job listing platform that displays real-world-style job cards
 
 ### 🖼️ Preview
 
-![Job Board Preview](./CardProject/src/assets/JobPreview.jpeg)
+![Job Board Preview](./src/assets/JobPreview.jpeg)
 
 ### ✨ Features
 
