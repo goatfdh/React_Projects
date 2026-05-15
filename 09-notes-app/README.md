@@ -1,16 +1,95 @@
-# React + Vite
+## 📝 `09-notes-app` — Notes App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautifully designed personal notes application with a warm aesthetic, allowing users to quickly add, view, and delete notes — all persisted via LocalStorage.
 
-Currently, two official plugins are available:
+### 🖼️ Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Notes App Preview](./src/assets/NotesPreview.jpeg)
 
-## React Compiler
+### ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ✏️ **Add Notes** — Enter a title and body text to create a new note
+- 🗑️ **Delete Notes** — Remove any note instantly with a single click
+- 💾 **LocalStorage Persistence** — Notes survive page refreshes automatically
+- 🃏 **Card-Based Display** — Notes displayed as stylish cards with decorative heart icons
+- 🎨 **Warm Design** — Soft pink-to-peach gradient background with a cozy feel
+- 📐 **Split Layout** — Left panel for input, right panel for viewing all saved notes
+- 📋 **Recent Notes Grid** — Notes appear in a responsive grid sorted by recency
 
-## Expanding the ESLint configuration
+### 🏗️ Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+09-notes-app/
+├── public/
+│   └── index.html
+├── src/
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── vite.config.js
+```
+
+### 🚀 Getting Started
+
+```bash
+# Navigate into the project
+cd 09-notes-app
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### 💡 Key React Concepts Used
+
+- **`useState`** — Managing form input and the list of notes in real time
+- **`useEffect`** — Syncing notes with LocalStorage whenever state changes
+- **LocalStorage API** — `setItem` / `getItem` for client-side persistence
+- **Controlled Components** — Input fields fully tied to React state
+- **Array `.filter()`** — Removing a specific note on delete by ID
+
+### 📦 Note Data Structure
+
+```js
+{
+  id: Date.now(),
+  title: "React Hooks",
+  body: "useState is used to manage state in functional components."
+}
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **React.js** | UI library for building component-based interfaces |
+| **Vite** | Fast development build tool and dev server |
+| **JSX** | JavaScript XML syntax for writing components |
+| **CSS3** | Styling, gradients, and layout |
+| **LocalStorage** | Client-side data persistence (Notes App) |
+
+---
+
+## 🚀 Running All Projects Locally
+
+```bash
+# Clone this repository
+git clone https://github.com/your-username/react-projects.git
+cd react-projects
+
+# Run Job Board
+cd CardProject
+npm install && npm run dev
+
+# Run Notes App (open a new terminal)
+cd ../09-notes-app
+npm install && npm run dev
+```
+
+---
